@@ -1,0 +1,24 @@
+.footer {
+    // margin-top: auto;
+    width: 100vw;
+    height: 10vmin;
+    position:fixed;
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background-color: black;
+
+    h2 {
+        color: rgb(82, 82, 82);
+        font-size: 2rem;
+        // margin-bottom: 5vmin;
+    }
+
+    p {
+        bottom: 1vh;
+        font-size: clamp(8px, 10px, 12px);
+    }
+}

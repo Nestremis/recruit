@@ -1,0 +1,134 @@
+// @import '../global.scss';
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700';
+
+.topbar {
+    width: 100%;
+    height: 10vmin;
+    position: fixed;
+    top: 0;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // letter-spacing: .2rem;
+
+    .top-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // background-color: grey;
+
+        .logo {
+            display: flex;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: calc(10px + 4vmin);
+            margin-left: 3vw;
+            // min-width: 10vw;
+            // background-color: #004848;
+        }
+
+        .logo:hover {
+            color: gold;
+        }
+        
+        h1{
+            margin-left: auto;
+            margin-right: 4vw;
+            font-size: calc(10px + 2vmin);
+        }
+        
+        .bulb {
+            position: relative;
+            font-size: 2.4rem;
+        }
+
+
+        .nav-menu {
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            grid-gap: 10px;
+            text-align: center;
+            width: 70vw;
+            justify-content: end;
+          
+            .nav-item {
+                height: 60px;
+
+                .nav-links {
+                    color: #ffffdd;
+                    display: grid;
+                    align-items: center;
+                    text-decoration: none;
+                    padding: 0 1rem;
+                    height: 100%;
+                    font-size: .9rem;
+                }
+
+                .nav-links:hover {
+                    color: orange;
+                    transition: all .4s;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .topbar {
+        position: sticky;
+        overflow: hidden;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 15vh;
+        border-radius: 10px;
+    }
+
+    .nav-menu.active {
+        transition: all 2s;
+        position: fixed;
+        z-index: 10;
+        grid-template-columns: 1fr !important;
+        height: 80vh;
+        width: 50vw;
+        right: 15vw;
+        background: radial-gradient(circle at 50% 50%, #005050, #004c4c, #004848, #004444, #004040, #003c3c, #003838, #003434, #003030, #002c2c, #002929, #002525);
+        opacity: .99;
+        align-items: center;
+
+        .nav-item {
+            text-align: center;
+        }
+    }
+
+    .nav-logo {
+        position: absolute;
+        padding: 0rem .1rem;
+    }
+
+    .bulb {
+        margin-left: 3vw !important;
+        left: 175px !important;
+    }
+
+    .menu-icon {
+        position: fixed;
+        display: flex;
+        color: #ffffdd;
+        justify-content: center;
+        align-items: center;
+        right: 2vw;
+        font-size: 1.8rem;
+        cursor: pointer;
+        transition: all .5s;
+    }
+
+    .menu-icon:hover {
+        color: #ffd700;
+    }
+}
