@@ -1,0 +1,17 @@
+.blockTwo{
+    background-color: lightgray;
+    width: 60%;
+    // align-self: center;
+    margin:auto;
+    margin-top: 10vh;
+    gap: 20px;
+
+    .leftButton {
+        margin: 1vmin;
+        background-color: orange;
+    }
+    .rightButton {
+        margin: 1vmin;
+        background-color: orange;
+    }
+}

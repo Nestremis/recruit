@@ -1,0 +1,17 @@
+.blockOne {
+    background-color: azure;
+    width: 60%;
+    // align-self: center;
+    margin:auto;
+    margin-top: 10vh;
+
+
+    .fieldset{
+    background-color: lightgrey;
+    // width: 70%;
+    
+        input{
+            display: block;
+        }
+    }   
+}

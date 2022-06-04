@@ -40,39 +40,34 @@
             font-size: calc(10px + 2vmin);
         }
         
-        .bulb {
-            position: relative;
-            font-size: 2.4rem;
-        }
 
-
-        .nav-menu {
-            display: grid;
-            grid-template-columns: repeat(5, auto);
-            grid-gap: 10px;
-            text-align: center;
-            width: 70vw;
-            justify-content: end;
+        // .nav-menu {
+        //     display: grid;
+        //     grid-template-columns: repeat(5, auto);
+        //     grid-gap: 10px;
+        //     text-align: center;
+        //     width: 70vw;
+        //     justify-content: end;
           
-            .nav-item {
-                height: 60px;
+        //     .nav-item {
+        //         height: 60px;
 
-                .nav-links {
-                    color: #ffffdd;
-                    display: grid;
-                    align-items: center;
-                    text-decoration: none;
-                    padding: 0 1rem;
-                    height: 100%;
-                    font-size: .9rem;
-                }
+        //         .nav-links {
+        //             color: #ffffdd;
+        //             display: grid;
+        //             align-items: center;
+        //             text-decoration: none;
+        //             padding: 0 1rem;
+        //             height: 100%;
+        //             font-size: .9rem;
+        //         }
 
-                .nav-links:hover {
-                    color: orange;
-                    transition: all .4s;
-                }
-            }
-        }
+        //         .nav-links:hover {
+        //             color: orange;
+        //             transition: all .4s;
+        //         }
+        //     }
+        // }
     }
 }
 
@@ -82,53 +77,53 @@
         overflow: hidden;
     }
 
-    .nav-menu {
-        display: none;
-        position: absolute;
-        top: 15vh;
-        border-radius: 10px;
-    }
+    // .nav-menu {
+    //     display: none;
+    //     position: absolute;
+    //     top: 15vh;
+    //     border-radius: 10px;
+    // }
 
-    .nav-menu.active {
-        transition: all 2s;
-        position: fixed;
-        z-index: 10;
-        grid-template-columns: 1fr !important;
-        height: 80vh;
-        width: 50vw;
-        right: 15vw;
-        background: radial-gradient(circle at 50% 50%, #005050, #004c4c, #004848, #004444, #004040, #003c3c, #003838, #003434, #003030, #002c2c, #002929, #002525);
-        opacity: .99;
-        align-items: center;
+    // .nav-menu.active {
+    //     transition: all 2s;
+    //     position: fixed;
+    //     z-index: 10;
+    //     grid-template-columns: 1fr !important;
+    //     height: 80vh;
+    //     width: 50vw;
+    //     right: 15vw;
+    //     background: radial-gradient(circle at 50% 50%, #005050, #004c4c, #004848, #004444, #004040, #003c3c, #003838, #003434, #003030, #002c2c, #002929, #002525);
+    //     opacity: .99;
+    //     align-items: center;
 
-        .nav-item {
-            text-align: center;
-        }
-    }
+    //     .nav-item {
+    //         text-align: center;
+    //     }
+    // }
 
-    .nav-logo {
-        position: absolute;
-        padding: 0rem .1rem;
-    }
+    // .nav-logo {
+    //     position: absolute;
+    //     padding: 0rem .1rem;
+    // }
 
-    .bulb {
-        margin-left: 3vw !important;
-        left: 175px !important;
-    }
+    // .bulb {
+    //     margin-left: 3vw !important;
+    //     left: 175px !important;
+    // }
 
-    .menu-icon {
-        position: fixed;
-        display: flex;
-        color: #ffffdd;
-        justify-content: center;
-        align-items: center;
-        right: 2vw;
-        font-size: 1.8rem;
-        cursor: pointer;
-        transition: all .5s;
-    }
+    // .menu-icon {
+    //     position: fixed;
+    //     display: flex;
+    //     color: #ffffdd;
+    //     justify-content: center;
+    //     align-items: center;
+    //     right: 2vw;
+    //     font-size: 1.8rem;
+    //     cursor: pointer;
+    //     transition: all .5s;
+    // }
 
-    .menu-icon:hover {
-        color: #ffd700;
-    }
+    // .menu-icon:hover {
+    //     color: #ffd700;
+    // }
 }

@@ -1,19 +1,39 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './footer.scss';
 
 
-const Footer = () => {
+const Footer = ({setName}) => {
 
-    const [click, setClick] = useState(false);
-    
-    const handleClick = () => setClick(!click);
+
+    const reset = () => '';
+
+    const onButtonClick =(name) => {
+        // setName(name);
+        setName(current => !current)  
+    }; 
 
     return (
         <>
         <div className='footer'>
             <div className='foot-container'>                    
-                <h2> nabthat </h2>                  
-             <div className='menu-icon' onClick={handleClick} > </div>
+                <div className='css-logo'> CSS <br/> IS <br/> AWESOME</div>
+                <h3> nabthat </h3>                  
+                
+                <div className="dropup">
+                    <button className="dropbtn">POKAŻ ^ </button>
+                    <div className="dropup-content">
+
+                        <button 
+                            onClick={reset}>
+                             &gt; ZRESETUJ USTAWIENIA
+                        </button>
+                        
+                        <button 
+                            onClick={() => onButtonClick(true)}> 
+                            &gt; POKAŻ DANE OSOBOWE
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
         </>

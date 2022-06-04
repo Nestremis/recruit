@@ -2,11 +2,8 @@ import React, {useState} from 'react';
 import './topbar.scss';
 
 
-const Topbar = () => {
+const Topbar = ({name}) => {
 
-    const [click, setClick] = useState(false);
-    
-    const handleClick = () => setClick(!click);
 
     return (
         <>
@@ -14,11 +11,18 @@ const Topbar = () => {
             <div className='top-container'>
                 <div className='logo'>
                     LOGO
-                </div>                 
-                <h1>
+                </div>          
+
+                 <h1>
                     <span style={{fontWeight:'400'}}>Zadanie</span> rekrutacyjne
-                </h1>                 
-                <div className='menu-icon' onClick={handleClick} > </div>
+                    
+                    {name && (
+                        <div>
+                            Wyatt Earp
+                        </div>
+                    )}    
+                </h1>       
+                          
             </div>
         </div>
         </>
