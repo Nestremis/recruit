@@ -7,7 +7,7 @@ const Footer = ({setName}) => {
 
     const reset = () => '';
 
-    const onButtonClick =(name) => {
+    const showName = (name) => {
         // setName(name);
         setName(current => !current)  
     }; 
@@ -17,19 +17,21 @@ const Footer = ({setName}) => {
         <div className='footer'>
             <div className='foot-container'>                    
                 <div className='css-logo'> CSS <br/> IS <br/> AWESOME</div>
-                <h3> nabthat </h3>                  
-                
+                <h3> -- nabthat --</h3>                  
+
                 <div className="dropup">
                     <button className="dropbtn">POKAŻ ^ </button>
                     <div className="dropup-content">
 
                         <button 
-                            onClick={reset}>
-                             &gt; ZRESETUJ USTAWIENIA
+                          onClick={reset}
+                        >
+                            &gt; ZRESETUJ USTAWIENIA
                         </button>
                         
                         <button 
-                            onClick={() => onButtonClick(true)}> 
+                            onClick={() => showName(true)}
+                        > 
                             &gt; POKAŻ DANE OSOBOWE
                         </button>
                     </div>

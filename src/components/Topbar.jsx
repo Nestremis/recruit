@@ -1,9 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './topbar.scss';
 
 
 const Topbar = ({name}) => {
-
 
     return (
         <>

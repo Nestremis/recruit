@@ -6,9 +6,11 @@ import BlockTwo from './components/BlockTwo';
 import BlockThree from './components/BlockThree';
 import { useState } from 'react';
 
-function App({nameFromFooter}) {
+function App() {
 
   const [name, setName] = useState(false);
+  const [optionMade, setOptionMade] = useState('');
+  const [currentRecord, setCurrentRecord] = useState('');
 
 
   return (
@@ -22,17 +24,25 @@ function App({nameFromFooter}) {
 
           <div className="block1"> 
             <h3>BLOK PIERWSZY</h3> 
-            <BlockOne/>
+            <BlockOne 
+              setOptionMade={setOptionMade} 
+            />
           </div>
 
           <div className="block2"> 
             <h3>BLOK DRUGI</h3> 
-            <BlockTwo/>
+            <BlockTwo 
+              optionMade={optionMade}
+              setCurrentRecord={setCurrentRecord} 
+              // currentRecord={currentRecord}            
+            />
           </div>
 
           <div className="block3"> 
             <h3>BLOK Z DŁUGĄ NAZWĄ KTÓRA SAMA SIĘ PRZYTNIE...</h3> 
-            <BlockThree/>
+            <BlockThree
+              currentRecord={currentRecord}
+            />
           </div>
 
         </section>

@@ -1,20 +1,50 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './blockOne.scss'
+import RadioButton from './RadioButton'
 
 
-const BlockOne = () => {
+const BlockOne = ({setOptionMade}) => {
+
+  const [selected, setSelected] = useState('');
+
+  // const [active, setActive] = useState(false);
+
+  const passChosenOption = () => {
+    setOptionMade(selected);
+  } 
+
+  const firstOptionChange = () => {
+    setSelected('Opcja pierwsza');
+  };
+  const secondOptionChange = () => {
+    setSelected('Opcja druga');
+  };
+  const thirdOptionChange = () => {
+    setSelected('Opcja losowa');
+  };
+
   return (
     <>
     <div className="blockOne">
       <div className="fieldset">        
-          <input type="radio" className="input"/> 
-          <label> Opcja pierwsza </label>
-
-          <input type="radio" className="input"/> 
-          <label> Opcja druga </label>
-     
-          <input type="radio" className="input"/> 
-          <label> Opcja losowa </label>
+          <RadioButton 
+            label="Opcja pierwsza"
+            value={selected === 'Opcja pierwsza'}
+            onChange={firstOptionChange}
+            checked={passChosenOption()}
+            />
+            <RadioButton 
+              label="Opcja druga"
+              value={selected === 'Opcja druga'}
+              onChange={secondOptionChange}
+              checked={()=> passChosenOption()}
+            />
+            <RadioButton 
+              label="Opcja losowa"
+              value={selected === 'Opcja losowa'}
+              onChange={thirdOptionChange}
+              checked={()=> passChosenOption()}
+          />
       </div>
 
       {/*<fieldset className="margin-bottom-md">
@@ -31,12 +61,18 @@ const BlockOne = () => {
         </ul>
   </fieldset> */}
 
-
-
-
     </div>
     </>
   )
 }
 
-export default BlockOne
+export default BlockOne;
+
+// <input type="radio" className="input"/> 
+// <label> Opcja pierwsza </label>
+
+// <input type="radio" className="input"/> 
+// <label> Opcja druga </label>
+
+// <input type="radio" className="input"/> 
+// <label> Opcja losowa </label>
