@@ -7,8 +7,6 @@ const BlockOne = ({setOptionMade}) => {
 
   const [selected, setSelected] = useState('');
 
-  // const [active, setActive] = useState(false);
-
   const passChosenOption = () => {
     setOptionMade(selected);
   } 
@@ -44,7 +42,7 @@ const BlockOne = ({setOptionMade}) => {
               value={selected === 'Opcja losowa'}
               onChange={thirdOptionChange}
               checked={()=> passChosenOption()}
-          />
+            />
       </div>
 
       {/*<fieldset className="margin-bottom-md">
@@ -64,15 +62,16 @@ const BlockOne = ({setOptionMade}) => {
     </div>
     </>
   )
-}
+};
 
 export default BlockOne;
 
-// <input type="radio" className="input"/> 
+// eslint-disable-next-line no-lone-blocks
+{/* // <input type="radio" className="input"/> 
 // <label> Opcja pierwsza </label>
 
 // <input type="radio" className="input"/> 
 // <label> Opcja druga </label>
 
 // <input type="radio" className="input"/> 
-// <label> Opcja losowa </label>
+// <label> Opcja losowa </label> */}

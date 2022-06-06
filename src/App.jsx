@@ -11,6 +11,7 @@ function App() {
   const [name, setName] = useState(false);
   const [optionMade, setOptionMade] = useState('');
   const [currentRecord, setCurrentRecord] = useState('');
+  const [addedRecord, setAddedRecord] = useState('');
 
 
   return (
@@ -33,8 +34,10 @@ function App() {
             <h3>BLOK DRUGI</h3> 
             <BlockTwo 
               optionMade={optionMade}
-              setCurrentRecord={setCurrentRecord} 
-              // currentRecord={currentRecord}            
+              setCurrentRecord={setCurrentRecord}
+              currentRecord={currentRecord}
+              setAddedRecord={setAddedRecord} 
+              addedRecord={addedRecord}            
             />
           </div>
 
@@ -42,6 +45,7 @@ function App() {
             <h3>BLOK Z DŁUGĄ NAZWĄ KTÓRA SAMA SIĘ PRZYTNIE...</h3> 
             <BlockThree
               currentRecord={currentRecord}
+              addedRecord={addedRecord}
             />
           </div>
 

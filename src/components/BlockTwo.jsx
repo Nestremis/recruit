@@ -2,10 +2,11 @@ import React from 'react'
 import './blockTwo.scss'
 import records from '../records.json';
 
-const BlockTwo = ({ optionMade, setCurrentRecord }) => {
+const BlockTwo = ({ optionMade, setCurrentRecord, currentRecord, setAddedRecord, addedRecord }) => {
+
+  let random = Math.floor(Math.random() * records.length);
 
   const handleReplace = () => {
-    let random = Math.floor(Math.random() * records.length);
 
     if (optionMade === 'Opcja pierwsza') {
       setCurrentRecord(records[0].content)
@@ -16,8 +17,10 @@ const BlockTwo = ({ optionMade, setCurrentRecord }) => {
     }
   };
 
-  const handleAddText = () => {
-    
+  const handleAddText = () => {    
+      if (currentRecord.content !== records[random].content) {
+        setAddedRecord(records[random].content)
+      }
   };
 
   return (
@@ -25,7 +28,6 @@ const BlockTwo = ({ optionMade, setCurrentRecord }) => {
 
         <button 
           className="leftButton"
-          // onClick={handleReplace}
           onClick={() => handleReplace()}
         > 
           ZASTĄP 
@@ -37,11 +39,10 @@ const BlockTwo = ({ optionMade, setCurrentRecord }) => {
         > 
           DOKLEJ 
         </button>
-
         
-        </div>
-        )
-      };
+    </div>
+  )
+};
       
       export default BlockTwo;
       // { <div> {optionMade} </div> }    

@@ -2,7 +2,7 @@ import React from 'react';
 import './blockTwo.scss';
 
 
-const BlockOne = ({currentRecord}) => {
+const BlockOne = ({currentRecord, addedRecord}) => {
 
   // const[text, setText] = useState(0);
 
@@ -17,23 +17,8 @@ const BlockOne = ({currentRecord}) => {
 
   return (
     <>
-      {
-      
-          <article> {currentRecord}  </article>
-        // records.map(record => {
-        //   return(
-        //     <article key={record.id}>
-        //       { records[currentRecord].content}
-        //     </article>
-        //   )
-        //  }
-        // ) 
-      //   {text && (
-      //     <div>
-      //     { records[currentRecord].content}
-      //     </div>
-      // )}    
-      }   
+      { <article> {currentRecord}  </article> }   
+      { <article> {addedRecord}  </article> }   
     </> 
   )
 };
