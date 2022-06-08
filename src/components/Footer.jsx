@@ -5,11 +5,12 @@ import './footer.scss';
 const Footer = ({setName, setReset}) => {
 
 
-    const reset = () => {
-        setName(false)
+    const makeReset = () => {
+        setName(false); 
+        setReset(true);
     };
 
-    const showName = (name) => {
+    const showName = () => {
         setName(current => !current)  
     }; 
 
@@ -36,13 +37,13 @@ const Footer = ({setName, setReset}) => {
                     
                     <div className="slide">
                         <button 
-                            onClick={() => reset()}
+                            onClick={() => makeReset()}
                         >
                           <i></i> ZRESETUJ USTAWIENIA
                         </button>
                       
                         <button 
-                            onClick={() => showName(true)}
+                            onClick={() => showName()}
                         > 
                             <i></i> POKAŻ DANE OSOBOWE
                         </button>

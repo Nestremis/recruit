@@ -1,26 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './blockTwo.scss';
 
 
-const BlockOne = ({currentRecord, addedRecord}) => {
+const BlockThree = ({currentRecord, addedRecord, reset, setCurrentRecord, setAddedRecord}) => {
 
-  // const[text, setText] = useState(0);
-
-  // const records = Records;
-
-  // const handleClick = (e)=> {
-  //   if (currentRecord <= records.length) {
-  //     setCurrentRecord(currentRecord + 1);
-  //   } 
-  // };
+ useEffect(() => {
+   if (reset) {
+     setCurrentRecord('');
+     setAddedRecord('');
+   }
+  //  return () => {
+  //    second
+  //  }
+ },[reset]);
+ 
 
 
   return (
     <>
-      { <article> {currentRecord}  </article> }   
-      { <article> {addedRecord}  </article> }   
+      {currentRecord && (
+        <div>
+           {currentRecord}
+        </div>
+       )}    
+
+      {addedRecord && (
+        <div>
+           {addedRecord}
+        </div>
+      )}    
     </> 
   )
 };
 
-export default BlockOne;
+export default BlockThree;
+

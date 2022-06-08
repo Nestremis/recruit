@@ -12,22 +12,26 @@ function App() {
   const [optionMade, setOptionMade] = useState('');
   const [currentRecord, setCurrentRecord] = useState('');
   const [addedRecord, setAddedRecord] = useState('');
-  const [reset, setReset] = useState('');
+  const [reset, setReset] = useState(false);
 
 
   return (
     <div className="App">
-    <Topbar name={name} reset={reset} />
+
+    <Topbar name={name} />
+
       <main> 
       <header>
-        <h1> N<span className="underline">agłówek H</span>1first </h1>
+        <h1> N<span className="underline">agłówek H</span>1</h1>
       </header>
         <section> 
 
           <div className="block1"> 
             <h3>BLOK PIERWSZY</h3> 
             <BlockOne 
-              setOptionMade={setOptionMade} 
+              setOptionMade={setOptionMade}
+              // optionMade={optionMade}
+              reset={reset}
             />
           </div>
 
@@ -47,12 +51,17 @@ function App() {
             <BlockThree
               currentRecord={currentRecord}
               addedRecord={addedRecord}
+              reset={reset} 
+              setCurrentRecord={setCurrentRecord} 
+              setAddedRecord={setAddedRecord}            
             />
           </div>
 
         </section>
-      </main>       
-    <Footer setName={setName} setReset={setReset}/> 
+      </main>     
+
+    <Footer setName={setName} setReset={setReset} /> 
+
     </div>
   );
 }

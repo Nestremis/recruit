@@ -2,7 +2,7 @@ import React from 'react';
 import './topbar.scss';
 
 
-const Topbar = ({name, reset}) => {
+const Topbar = ({name}) => {
 
     return (
         <>

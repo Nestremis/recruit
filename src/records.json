@@ -24,5 +24,9 @@
     {
         "id": 6,
         "content": "Aenean viverra mauris eu est finibus bibendum. Mauris ut condimentum eros. Nunc faucibus ex sapien, quis interdum tortor consectetur ac. Nullam mattis vitae ante vitae dignissim."
+    },
+    {
+        "id": 7,
+        "content": "Opcja zdublowana"
     }
 ]

@@ -1,16 +1,15 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './blockOne.scss'
 import RadioButton from './RadioButton'
 
 
-const BlockOne = ({setOptionMade}) => {
-
+const BlockOne = ({setOptionMade, reset}) => {  
   const [selected, setSelected] = useState('');
 
-  const passChosenOption = () => {
+  function passChosenOption() {
     setOptionMade(selected);
-  } 
-
+  }; 
+  
   const firstOptionChange = () => {
     setSelected('Opcja pierwsza');
   };
@@ -20,31 +19,41 @@ const BlockOne = ({setOptionMade}) => {
   const thirdOptionChange = () => {
     setSelected('Opcja losowa');
   };
-
+  
+  useEffect(() => {
+    if (reset) {
+        setSelected('');
+        }
+    // return () => {
+    //   reset = !reset
+    // }
+  },);
+  
   return (
     <>
     <div className="blockOne">
       <div className="fieldset">        
-          <RadioButton 
-            label="Opcja pierwsza"
-            value={selected === 'Opcja pierwsza'}
-            onChange={firstOptionChange}
-            checked={passChosenOption()}
+            <RadioButton 
+              label="Opcja pierwsza"
+              value={selected === 'Opcja pierwsza'}
+              onChange={firstOptionChange}
+              checked={passChosenOption()}
             />
             <RadioButton 
               label="Opcja druga"
               value={selected === 'Opcja druga'}
               onChange={secondOptionChange}
-              checked={()=> passChosenOption()}
+              checked={passChosenOption()}
             />
             <RadioButton 
               label="Opcja losowa"
               value={selected === 'Opcja losowa'}
               onChange={thirdOptionChange}
-              checked={()=> passChosenOption()}
+              checked={passChosenOption()}
             />
       </div>
 
+      
       {/*<fieldset className="margin-bottom-md">
         <ul className="flex flex-column gap-xxxs">
           <li>
