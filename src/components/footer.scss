@@ -1,7 +1,6 @@
 .footer {
-    // margin-top: auto;
     width: 100vw;
-    height: 10vmin;
+    height: 140px;
     position:fixed;
     bottom: 0;
     text-align: center;
@@ -9,7 +8,8 @@
     flex-direction: column;
     justify-content: center;
     color: white;
-    background-color: black;
+    background-color: #15161a;
+    border: 1px solid black;
 
     .foot-container {
         width: 100%;
@@ -17,95 +17,170 @@
         align-items: center;
         justify-content: space-between;
 
-        .css-logo {
+        @media screen and (max-width: 480px) {
+            display: grid;
+            grid-template-columns: 1fr;
+            place-items:center;
+        }
+
+        .css-logo{
             display: flex;
             cursor: pointer;
             text-decoration: none;
             font-size: calc(8px + 1vmin);
-            margin-left: 3vw;
-            // min-width: 10vw;
-            // background-color: #004848;
-        }
+            margin-left: 2vw;
+            text-align: left;
 
-        .css-logo:hover {
-            color: gold;
-        }
+            .square{
+                position: relative;
+                width: calc(30px + 5vmin);
+                height: calc(30px + 5vmin);
+                background-color: transparent;
+                border: gray 1px solid;
+                margin-left: calc(-10px + -9vmin);
+                transition: width 1s, height 1s, transform .5s  ;
+
+                &:hover{
+                    border: gold 1px solid;
+                    transform: rotate(180deg);
+                }
+            }
+
+            @media screen and (max-width: 479px) {
+                display: none;
+            }
+        }        
         
         h3 {
-            color: rgb(82, 82, 82);
-            font-size: 2rem;
-            // margin-bottom: 5vmin;
+            color: #525252;
+            font-size: 1,5rem;
+           
+            &::before,
+            &::after {
+                content:'';
+                display: inline-block;
+                border-top: 1px solid #525252;
+                width: 3rem;
+                margin: 0 .2rem;
+                transform: translateY(-0.5rem);
+            }
 
             @media screen and (max-width: 960px) {
-                // overflow-y: scroll;
                 display: none;
             }
         }
 
+
         .dropup {
-          position: relative;
-          display: inline-block;
-          margin-right: 3vw;
-          cursor: pointer;
+            width: 270px; 
+            position: relative;
+            right: 5vw;
+            bottom: -20px; 
+            display: flex;
 
-          
-          
-          .dropup-content a:hover {
-              background-color: #ccc;
+            b {
+                background : #2d2f31; 
+                color : white;
+                cursor : pointer;
+                display: block;
+                position: absolute;
+                bottom: 0px;
+                width: 270px;
+                border: 1px solid white;
+                border-radius: 3px;
+                height: 48px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                    &:after {
+                    content: "";
+                    margin-left: 15px;
+                    transform: rotate(-135deg);
+                    border: solid white;
+                    border-width: 0 2px 2px 0;
+                    display: inline-block;
+                    padding: 4px;
+                    margin-top: 4px;
+                    color: white;
+                    transition: transform .2s;
+
+                    #touch:checked {
+                        display: inline-block;
+                        transform: rotate(45deg);
+                        margin-bottom: 10px;
+                    }
+                }           
+               
+                #touch:checked + &::after {
+                    display: inline-block;
+                    transform: rotate(45deg);
+                    margin-bottom: 10px;
+                }
+    
             }
-          
-           .dropup-content button {
-              color: black;
-              padding: 12px 16px;
-              text-decoration: none;
-              display: block;
-              cursor: pointer;
-             }
 
-           .dropup-content {
-            display: none;
-            position: absolute;
-            background-color: #f1f1f1;
-            min-width: 160px;
-            bottom: 50px;
-            z-index: 1;
-            // cursor: pointer;
-             }
-        
-            .dropbtn {
-            background-color: #2e87c2;
-            color: white;
-            padding: 16px;
-            font-size: 16px;
-            border: none;
-            border: 1px white solid;
-          }  
-        }
-        
-        .dropup:hover .dropbtn {
-          background-color: #16a2ff;
-          cursor: pointer;
-        }
-        
-        .dropup:hover .dropup-content {
-            display: block;
-        }
-          
-          
-          
-          
+           
+              .slide {
+                width: 270px;
+                height: 0px;
+                overflow: hidden;
+                text-align: center;
+                transition: height .4s ease;
+                position: absolute;
+                bottom: 90px;
+                margin-bottom: 10px;
+                background-color: white;
+                box-shadow: rgba(0, 0, 0, 0) 0px 54px 55px, rgba(0, 0, 0, 0.2) 0px -12px 30px, rgba(0, 0, 0, 0.2) 0px 4px 6px, rgba(0, 0, 0, 0.23) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -5px 5px;
+                display: block;
 
-        
 
-    // h2 {
-    //     color: rgb(82, 82, 82);
-    //     font-size: 2rem;
-    //     // margin-bottom: 5vmin;
+                button {
+                    color: black;
+                    background-color: inherit;
+                    display: block;
+                    border: none;
+                    margin: 18px;
+                    font-weight:600;
+                    font-size: .95rem;
 
-    //     @media screen and (max-width: 960px) {
-    //         // overflow-y: scroll;
-    //         display: none;
-    //     }
-    // }
+                    i{
+                        transform: rotate(-45deg);
+                        border: solid black;
+                        border-width: 0 2px 2px 0;
+                        display: inline-block;
+                        padding: 3px;
+                        margin-right: 6px; 
+                    }
+
+                    &:hover {
+                        color: #e58f2c;
+                        i {
+                            border: solid #e58f2c;
+                            border-width: 0 2px 2px 0;
+                        }
+                    }
+         
+                }                
+                // .slide button {
+                //     // padding: 20px;
+                //     // margin: auto 5px;                   
+                //   }
+                   
+              }
+    
+              #touch:checked + .slide {
+                  height: 90px;                  
+                }  
+                // b:hover::after{
+                //     // display: inline-block;
+                //     transform: rotate(45deg);
+                //     margin-bottom: 10px;
+                // }
+          }
+ 
+          
     }
 }
+
+

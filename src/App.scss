@@ -25,6 +25,11 @@
       h1{
        color: white;
        font-size: calc(10px + 2vmin);
+       
+       .underline{
+         border-bottom: 1px solid white;
+         padding-bottom: 1vmin;
+       }
       }
     }
 

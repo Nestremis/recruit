@@ -7,9 +7,8 @@ const BlockTwo = ({ optionMade, setCurrentRecord, currentRecord, setAddedRecord,
   let random = Math.floor(Math.random() * records.length);
 
   const handleReplace = () => {
-
     if (optionMade === 'Opcja pierwsza') {
-      setCurrentRecord(records[0].content)
+      setCurrentRecord(records[0].content);
     } else if (optionMade === 'Opcja druga') {
       setCurrentRecord(records[1].content)
     } else if (optionMade === 'Opcja losowa') {
@@ -18,9 +17,15 @@ const BlockTwo = ({ optionMade, setCurrentRecord, currentRecord, setAddedRecord,
   };
 
   const handleAddText = () => {    
-      if (currentRecord.content !== records[random].content) {
-        setAddedRecord(records[random].content)
+      const nextText = records[random].content;
+      if (currentRecord !== nextText) {
+        setAddedRecord(nextText)
+      } else {
+        setAddedRecord('done')
       }
+      // else {
+      //   setAddedRecord(prev => records[random].content)
+      // }
   };
 
   return (

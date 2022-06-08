@@ -2,40 +2,54 @@ import React from 'react';
 import './footer.scss';
 
 
-const Footer = ({setName}) => {
+const Footer = ({setName, setReset}) => {
 
 
-    const reset = () => '';
+    const reset = () => {
+        setName(false)
+    };
 
     const showName = (name) => {
-        // setName(name);
         setName(current => !current)  
     }; 
 
     return (
         <>
         <div className='footer'>
-            <div className='foot-container'>                    
-                <div className='css-logo'> CSS <br/> IS <br/> AWESOME</div>
-                <h3> -- nabthat --</h3>                  
+            <div className='foot-container'>   
+            <div className="css-logo">              
+                <div className='css'> CSS <br/> IS <br/> AWESOME</div>
+                <div className='square'></div>
+            </div>
+               
+                <h3 title='nabthat'> nabthat </h3>    
+
 
                 <div className="dropup">
-                    <button className="dropbtn">POKAŻ ^ </button>
-                    <div className="dropup-content">
 
+                    <label htmlFor="touch">
+                        <b> POKAŻ </b>                        
+                    </label>    
+
+                    <input type="checkbox" id="touch"/> 
+                    
+                    
+                    <div className="slide">
                         <button 
-                          onClick={reset}
+                            onClick={() => reset()}
                         >
-                            &gt; ZRESETUJ USTAWIENIA
+                          <i></i> ZRESETUJ USTAWIENIA
                         </button>
-                        
+                      
                         <button 
                             onClick={() => showName(true)}
                         > 
-                            &gt; POKAŻ DANE OSOBOWE
+                            <i></i> POKAŻ DANE OSOBOWE
                         </button>
                     </div>
-                </div>
+
+                </div> 
+
             </div>
         </div>
         </>

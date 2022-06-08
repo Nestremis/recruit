@@ -12,14 +12,15 @@ function App() {
   const [optionMade, setOptionMade] = useState('');
   const [currentRecord, setCurrentRecord] = useState('');
   const [addedRecord, setAddedRecord] = useState('');
+  const [reset, setReset] = useState('');
 
 
   return (
     <div className="App">
-    <Topbar name={name}/>
+    <Topbar name={name} reset={reset} />
       <main> 
       <header>
-        <h1>Nagłówek H1</h1>
+        <h1> N<span className="underline">agłówek H</span>1first </h1>
       </header>
         <section> 
 
@@ -51,7 +52,7 @@ function App() {
 
         </section>
       </main>       
-    <Footer setName={setName}/> 
+    <Footer setName={setName} setReset={setReset}/> 
     </div>
   );
 }
