@@ -17,11 +17,18 @@ const BlockTwo = ({ optionMade, setCurrentRecord, currentRecord, setAddedRecord 
   };
 
   const handleAddText = () => {    
+
       const nextRandomText = records[random].content;
+
+      // const notUniqueText = 'TREŚĆ NIE JEST UNIKALNA';
+
       if (currentRecord !== nextRandomText) {
         setAddedRecord(nextRandomText)
-      } else {
-        setAddedRecord(records[7].content)
+        // console.log(nextRandomText.id);
+      } else if (currentRecord === nextRandomText) {
+        console.log('what');
+        setAddedRecord('TREŚĆ NIE JEST UNIKALNA');
+        // console.log(record);
       }
       // else {
       //   setAddedRecord(prev => records[random].content)
@@ -44,11 +51,9 @@ const BlockTwo = ({ optionMade, setCurrentRecord, currentRecord, setAddedRecord 
         > 
           DOKLEJ 
         </button>
-        
-       { <div> {optionMade} </div> }    
-        
+
     </div>
   )
 };
       
-      export default BlockTwo;
+export default BlockTwo;

@@ -32,6 +32,7 @@ function App() {
               setOptionMade={setOptionMade}
               // optionMade={optionMade}
               reset={reset}
+              setReset={setReset}
             />
           </div>
 
@@ -42,7 +43,7 @@ function App() {
               setCurrentRecord={setCurrentRecord}
               currentRecord={currentRecord}
               setAddedRecord={setAddedRecord} 
-              addedRecord={addedRecord}            
+              // addedRecord={addedRecord}            
             />
           </div>
 

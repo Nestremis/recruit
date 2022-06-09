@@ -1,11 +1,27 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './blockOne.scss'
 import RadioButton from './RadioButton'
 
 
-const BlockOne = ({setOptionMade, reset}) => {  
+const BlockOne = ({setOptionMade, reset, setReset}) => {  
+
   const [selected, setSelected] = useState('');
 
+  useEffect(() => {
+    if (reset === true) {
+      setSelected('')
+    }
+    return () => {
+      setReset(false)
+    }
+  },[reset, setReset]);
+
+  // useEffect(() => {
+  //   function passChosenOption() {
+  //     setOptionMade(selected);
+  //   }; 
+  // }, [selected, setOptionMade])
+  
   function passChosenOption() {
     setOptionMade(selected);
   }; 
@@ -19,15 +35,6 @@ const BlockOne = ({setOptionMade, reset}) => {
   const thirdOptionChange = () => {
     setSelected('Opcja losowa');
   };
-  
-  useEffect(() => {
-    if (reset) {
-        setSelected('');
-        }
-    // return () => {
-    //   reset = !reset
-    // }
-  },);
   
   return (
     <>

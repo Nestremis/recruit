@@ -9,13 +9,8 @@ const BlockThree = ({currentRecord, addedRecord, reset, setCurrentRecord, setAdd
      setCurrentRecord('');
      setAddedRecord('');
    }
-  //  return () => {
-  //    second
-  //  }
- },[reset]);
+ },);
  
-
-
   return (
     <>
       {currentRecord && (
