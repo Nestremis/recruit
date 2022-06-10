@@ -39,14 +39,14 @@ const BlockTwo = ({ optionMade, setCurrentRecord, currentRecord, setAddedRecord 
     <div className="blockTwo">
 
         <button 
-          className="leftButton"
+          // className="button-left"
           onClick={() => handleReplace()}
         > 
           ZASTĄP 
         </button>
 
         <button 
-          className="rightButton"
+          // className="button-right"
           onClick={() => handleAddText()}
         > 
           DOKLEJ 

@@ -1,9 +1,8 @@
-@import 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700';
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700';
 
 .App {
   text-align: center;
-  background-color: #282c34;
-  // background-color: blue;
+  background-color: #2a2d36;
   height: 100vh;
   width: 100vw;
   font-family: 'Open Sans';
@@ -11,26 +10,31 @@
 
   main{
     margin-top: 10vmin;
-    background-color: bisque;
     min-height: 80vmin;
+    color: white;
+
     @media screen and (max-width: 960px) {
       margin-top: 0;
-      // overflow-y: scroll;
-      // display: block;
     }
 
-    header{
-      padding: 8vmin;
-      background-color: #61dafb;
-      h1{
-       color: white;
-       font-size: calc(10px + 2vmin);
+    header {
+      padding: 6vmin;
+      background-color: #2a2d36;
+
+      h1 {
+       font-size: calc(1rem + 3vmin);
+       font-weight: 400;
        
-       .underline{
+       .underline {
          border-bottom: 1px solid white;
-         padding-bottom: 1vmin;
+         padding-bottom: 1.5vmin;
        }
       }
+
+      @media screen and (max-width: 960px) {
+        padding-top: 0;
+        padding-bottom: 2vmin; 
+       }
     }
 
     
@@ -42,40 +46,42 @@
       flex-wrap: wrap;
      
       .block1 {
-        // margin: 0;
         width: 33vw;
         height: 50vmin;
-        background-color: khaki;
+        font-size: calc(8px + 1vmin);
+
         @media screen and (max-width: 960px) {
-          width: 45vw;
+          width: 49vw;
+          height: 50vmin;
           h3{
-            font-size: calc(10px + 1vmin);
+            font-size: calc(12px + 1vmin);
           }
          }
       }
 
       .block2 {
-        // margin: 0;
         width: 33vw;
         height: 50vmin;
-        background-color: khaki;
+        font-size: calc(8px + 1vmin);
+        // align-items: ;
+        
         @media screen and (max-width: 960px) {
-          width: 45vw;
+          width: 49vw;
+          // right: 0;
           h3{
-            font-size: calc(10px + 1vmin);
+            font-size: calc(12px + 1vmin);
           }
          }
       }
 
       .block3 {
-        // margin: 0;
         width: 33vw;
         height: 50vmin;
-        background-color: khaki;
+        font-size: calc(8px + 1vmin);
         @media screen and (max-width: 960px) {
-         width: 90vw;
+         width: 98vw;
          h3{
-          font-size: calc(10px + 1vmin);
+          font-size: calc(12px + 1vmin);
         }
         }
       }
@@ -87,28 +93,3 @@
     }
   }
 }
-
-
-// .App-header {
-//   background-color: #282c34;
-//   min-height: 100vh;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   font-size: calc(10px + 2vmin);
-//   color: white;
-// }
-
-// .App-link {
-//   color: #61dafb;
-// }
-
-// @keyframes App-logo-spin {
-//   from {
-//     transform: rotate(0deg);
-//   }
-//   to {
-//     transform: rotate(360deg);
-//   }
-// }

@@ -1,17 +1,16 @@
 .blockOne {
-    background-color: azure;
-    width: 60%;
-    // align-self: center;
-    margin:auto;
-    margin-top: 10vh;
+    margin-top: 5vmin;
+    background-color: khaki;
 
 
     .fieldset{
-    background-color: lightgrey;
-    // width: 70%;
+     background-color: #2a2d36;
+     display: block;
+     font-weight: 300;
+     font-size: 1.4rem;;
     
-        input{
+        input[type='radio'] {
             display: block;
-        }
+        }   
     }   
 }

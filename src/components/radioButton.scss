@@ -1,0 +1,42 @@
+    label {
+    margin: clamp(1rem, 30px, 2rem);
+    display:flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: calc(12px + 1vmin);
+     
+    input[type='radio'] {
+        border: 5px solid white;
+        appearance:none;
+        border-radius: 50%;
+        width: calc(25px + 1vmin);
+        height: calc(25px + 1vmin);
+        margin: clamp(0vmin, 60px, 2vmin);     
+        margin-left: calc(5px + 1vmin);
+
+        &:checked:after {
+            content: '';
+            display: flex;
+            width: 60%;
+            height: 60%;
+            background-color: white;
+            border-radius: 50%;
+            margin: 20%;
+        }
+    }
+   
+    @media screen and (max-width: 960px) {
+        width: 45vw;
+        height: 5vmin;
+        // margin: 20px;
+        // margin-left: 0;
+        h3{
+          font-size: calc(11px + 1vmin);
+        }
+       }
+    
+}
+
+// input:checked + label {
+//     color: red;
+// }

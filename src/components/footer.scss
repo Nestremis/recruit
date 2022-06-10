@@ -3,64 +3,75 @@
     height: 140px;
     position:fixed;
     bottom: 0;
-    text-align: center;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    color: white;
+    // align-items: center;
     background-color: #15161a;
-    border: 1px solid black;
+    border-top: 1px solid black;
 
     .foot-container {
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: center; 
 
-        @media screen and (max-width: 480px) {
-            display: grid;
+        @media screen and (max-width: 960px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (max-width: 520px) {
             grid-template-columns: 1fr;
-            place-items:center;
         }
 
         .css-logo{
             display: flex;
+            justify-self: start;
+            margin-left: 60px;
             cursor: pointer;
-            text-decoration: none;
-            font-size: calc(8px + 1vmin);
-            margin-left: 2vw;
             text-align: left;
+            text-decoration: none;
+            font-size: clamp(20px, 26px, 26px);
+            align-self: center;
+            color: #2a2d34;
+            transition: all 1s ease;
+            &:hover{
+                color: white;
+            }
 
             .square{
                 position: relative;
-                width: calc(30px + 5vmin);
-                height: calc(30px + 5vmin);
+                width: calc(100px + 1vmin);
+                height: calc(100px + 1vmin);
                 background-color: transparent;
-                border: gray 1px solid;
-                margin-left: calc(-10px + -9vmin);
-                transition: width 1s, height 1s, transform .5s  ;
+                border: #2a2d34 1px solid;
+                margin-left: -135px;
+                transition: all .8s ease;
 
                 &:hover{
-                    border: gold 1px solid;
+                    border: orange 1px solid;
                     transform: rotate(180deg);
                 }
             }
 
-            @media screen and (max-width: 479px) {
+            @media screen and (max-width: 960px) {
+               margin-left: 30px;
+            }
+            @media screen and (max-width: 520px) {
                 display: none;
             }
         }        
         
+
         h3 {
-            color: #525252;
-            font-size: 1,5rem;
-           
+            color: #2a2d34;
+            font-size: 1.8rem;
+            font-weight: 400;
             &::before,
             &::after {
                 content:'';
                 display: inline-block;
-                border-top: 1px solid #525252;
-                width: 3rem;
+                border-top: 1px solid #2a2d34;
+                width: 4rem;
                 margin: 0 .2rem;
                 transform: translateY(-0.5rem);
             }
@@ -73,53 +84,67 @@
 
         .dropup {
             width: 270px; 
-            position: relative;
-            right: 5vw;
-            bottom: -20px; 
+            position: absolute;
+            bottom: 20px; 
             display: flex;
+            margin: 0;
+            // justify-self: end;
+            // background-color: khaki;
+            right: 60px;
 
-            b {
-                background : #2d2f31; 
-                color : white;
+           
+            @media screen and (max-width: 520px) {
+                justify-self: center;
+                // margin-left: 60px;
+            }
+
+            .footlab {
+                background-color : inherit; 
+                color : #bebebe;
                 cursor : pointer;
-                display: block;
-                position: absolute;
-                bottom: 0px;
+                position: relative;
                 width: 270px;
-                border: 1px solid white;
+                border: 1px solid #2a2d34;
                 border-radius: 3px;
                 height: 48px;
-                display: flex;
+                // display: flex;
                 justify-content: center;
-                align-items: center;
-    
-                    &:after {
+                // justify-self: end;
+                align-items: center;     
+                margin: 0;   
+                bottom: 25px;
+
+
+                &:after {
                     content: "";
                     margin-left: 15px;
                     transform: rotate(-135deg);
-                    border: solid white;
+                    border: solid #bebebe;
                     border-width: 0 2px 2px 0;
                     display: inline-block;
                     padding: 4px;
                     margin-top: 4px;
-                    color: white;
                     transition: transform .2s;
+                    color: #e58f2c;
+                    }           
 
-                    #touch:checked {
-                        display: inline-block;
-                        transform: rotate(45deg);
-                        margin-bottom: 10px;
+                &:hover {
+                    color: white;
+                    &:after{
+                        border-color: white;
+                        }
                     }
-                }           
-               
-                #touch:checked + &::after {
-                    display: inline-block;
-                    transform: rotate(45deg);
-                    margin-bottom: 10px;
                 }
-    
-            }
-
+                
+                // #mark:checked + ::after {
+                //     color: red;
+                //   }   
+                // #touch:checked + b::after {
+                //     background-color: #e58f2c;
+                //     // display: inline-block;
+                //     // transform: rotate(0deg);
+                //     // margin-bottom: 10px;
+                //     }             
            
               .slide {
                 width: 270px;
@@ -128,8 +153,7 @@
                 text-align: center;
                 transition: height .4s ease;
                 position: absolute;
-                bottom: 90px;
-                margin-bottom: 10px;
+                bottom: 122px;
                 background-color: white;
                 box-shadow: rgba(0, 0, 0, 0) 0px 54px 55px, rgba(0, 0, 0, 0.2) 0px -12px 30px, rgba(0, 0, 0, 0.2) 0px 4px 6px, rgba(0, 0, 0, 0.23) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -5px 5px;
                 display: block;
@@ -144,43 +168,36 @@
                     font-weight:600;
                     font-size: .95rem;
 
-                    i{
+                     i  {
                         transform: rotate(-45deg);
                         border: solid black;
                         border-width: 0 2px 2px 0;
                         display: inline-block;
-                        padding: 3px;
+                        padding: 4px;
                         margin-right: 6px; 
-                    }
+                        }
 
                     &:hover {
                         color: #e58f2c;
                         i {
                             border: solid #e58f2c;
                             border-width: 0 2px 2px 0;
-                        }
-                    }
-         
-                }                
-                // .slide button {
-                //     // padding: 20px;
-                //     // margin: auto 5px;                   
-                //   }
-                   
-              }
-    
-              #touch:checked + .slide {
-                  height: 90px;                  
-                }  
-                // b:hover::after{
-                //     // display: inline-block;
-                //     transform: rotate(45deg);
-                //     margin-bottom: 10px;
-                // }
-          }
- 
-          
-    }
+                          }
+                        }         
+                     }          
+                 }              
+            
+
+            #mark {position: absolute; opacity: 0; height: 0px;}  
+            
+            #mark:checked + .slide { height: 90px; }                
+        }
+    }    
 }
 
+
+// .slide button {
+//     // padding: 20px;
+//     // margin: auto 5px;                   
+//   }                   
 

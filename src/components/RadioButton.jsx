@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './radioButton.scss';
 
 const RadioButton = ({ label, value, onChange, checked }) => {
     return (

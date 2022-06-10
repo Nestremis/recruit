@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './blockTwo.scss';
+import './blockThree.scss';
 
 
 const BlockThree = ({currentRecord, addedRecord, reset, setCurrentRecord, setAddedRecord}) => {
@@ -13,17 +13,21 @@ const BlockThree = ({currentRecord, addedRecord, reset, setCurrentRecord, setAdd
  
   return (
     <>
+    <div className="wrapper">
+    
       {currentRecord && (
-        <div>
+        <article>
            {currentRecord}
-        </div>
+        </article>
        )}    
 
       {addedRecord && (
-        <div>
+        <article>
            {addedRecord}
-        </div>
+        </article>
       )}    
+
+      </div>
     </> 
   )
 };

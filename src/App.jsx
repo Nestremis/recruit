@@ -30,7 +30,6 @@ function App() {
             <h3>BLOK PIERWSZY</h3> 
             <BlockOne 
               setOptionMade={setOptionMade}
-              // optionMade={optionMade}
               reset={reset}
               setReset={setReset}
             />
@@ -42,8 +41,7 @@ function App() {
               optionMade={optionMade}
               setCurrentRecord={setCurrentRecord}
               currentRecord={currentRecord}
-              setAddedRecord={setAddedRecord} 
-              // addedRecord={addedRecord}            
+              setAddedRecord={setAddedRecord}       
             />
           </div>
 
@@ -68,12 +66,3 @@ function App() {
 }
 
 export default App;
-
-// <a
-// className="App-link"
-// href="https://reactjs.org"
-// target="_blank"
-// rel="noopener noreferrer"
-// >
-// Learn React
-// </a>
