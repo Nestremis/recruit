@@ -28,7 +28,7 @@ const Footer = ({setName, setReset}) => {
 
                 <div className="dropup">
 
-                    <label htmlFor="mark" className='footlab'>
+                    <label htmlFor="mark" className='footlabel'>
                         POKAŻ                         
                     </label>    
                     <input type="checkbox" id="mark"/>                    

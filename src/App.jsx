@@ -21,42 +21,45 @@ function App() {
     <Topbar name={name} />
 
       <main> 
-      <header>
-        <h1> N<span className="underline">agłówek H</span>1</h1>
-      </header>
-        <section> 
+      
+        <header>
+          <h1> N<span className="underline">agłówek H</span>1</h1>
+        </header>
 
-          <div className="block1"> 
-            <h3>BLOK PIERWSZY</h3> 
-            <BlockOne 
-              setOptionMade={setOptionMade}
-              reset={reset}
-              setReset={setReset}
-            />
-          </div>
+          <section> 
 
-          <div className="block2"> 
-            <h3>BLOK DRUGI</h3> 
-            <BlockTwo 
-              optionMade={optionMade}
-              setCurrentRecord={setCurrentRecord}
-              currentRecord={currentRecord}
-              setAddedRecord={setAddedRecord}       
-            />
-          </div>
+            <div className="block1"> 
+              <h3>BLOK PIERWSZY</h3> 
+              <BlockOne 
+                setOptionMade={setOptionMade}
+                reset={reset}
+                setReset={setReset}
+              />
+            </div>
 
-          <div className="block3"> 
-            <h3>BLOK Z DŁUGĄ NAZWĄ KTÓRA SAMA SIĘ PRZYTNIE...</h3> 
-            <BlockThree
-              currentRecord={currentRecord}
-              addedRecord={addedRecord}
-              reset={reset} 
-              setCurrentRecord={setCurrentRecord} 
-              setAddedRecord={setAddedRecord}            
-            />
-          </div>
+            <div className="block2"> 
+              <h3>BLOK DRUGI</h3> 
+              <BlockTwo 
+                optionMade={optionMade}
+                setCurrentRecord={setCurrentRecord}
+                currentRecord={currentRecord}
+                setAddedRecord={setAddedRecord}       
+              />
+            </div>
 
-        </section>
+            <div className="block3"> 
+              <h3>BLOK Z DŁUGĄ NAZWĄ KTÓRA SAMA SIĘ PRZYTNIE...</h3> 
+              <BlockThree
+                currentRecord={currentRecord}
+                addedRecord={addedRecord}
+                reset={reset} 
+                setCurrentRecord={setCurrentRecord} 
+                setAddedRecord={setAddedRecord}            
+              />
+            </div>
+
+          </section>
+
       </main>     
 
     <Footer setName={setName} setReset={setReset} /> 

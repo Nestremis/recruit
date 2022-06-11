@@ -20,11 +20,8 @@ const BlockTwo = ({ optionMade, setCurrentRecord, currentRecord, setAddedRecord 
 
       const nextRandomText = records[random].content;
 
-      // const notUniqueText = 'TREŚĆ NIE JEST UNIKALNA';
-
       if (currentRecord !== nextRandomText) {
         setAddedRecord(nextRandomText)
-        // console.log(nextRandomText.id);
       } else if (currentRecord === nextRandomText) {
         console.log('what');
         setAddedRecord('TREŚĆ NIE JEST UNIKALNA');
@@ -39,14 +36,12 @@ const BlockTwo = ({ optionMade, setCurrentRecord, currentRecord, setAddedRecord 
     <div className="blockTwo">
 
         <button 
-          // className="button-left"
           onClick={() => handleReplace()}
         > 
           ZASTĄP 
         </button>
 
         <button 
-          // className="button-right"
           onClick={() => handleAddText()}
         > 
           DOKLEJ 

@@ -1,97 +1,104 @@
-@import 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
 .App {
   text-align: center;
   background-color: #2a2d36;
   height: 100vh;
   width: 100vw;
-  font-family: 'Open Sans';
-  overflow: hidden;
-
+  font-family: 'Open Sans';  
+  overflow-x: hidden;
+ 
   main{
     margin-top: 10vmin;
-    min-height: 80vmin;
     color: white;
+    background-color: aquamarine;
+      
+      header {
+        padding: 5vmin;
+        background-color: #2a2d36;
+        
+        h1 {
+          font-size: calc(1rem + 3vmin);
+          font-weight: 400;
+         
+          .underline {
+            border-bottom: 1px solid white;
+            padding-bottom: 1.5vmin;
+            }
+          }
 
-    @media screen and (max-width: 960px) {
-      margin-top: 0;
-    }
-
-    header {
-      padding: 6vmin;
-      background-color: #2a2d36;
-
-      h1 {
-       font-size: calc(1rem + 3vmin);
-       font-weight: 400;
-       
-       .underline {
-         border-bottom: 1px solid white;
-         padding-bottom: 1.5vmin;
-       }
-      }
-
-      @media screen and (max-width: 960px) {
-        padding-top: 0;
-        padding-bottom: 2vmin; 
-       }
-    }
+        @media screen and (max-width: 960px) {
+          // padding-top: 0;
+          // margin-top: 2vmin;
+          }
+        }
 
     
 
-    section{
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;  
-      flex-wrap: wrap;
-     
-      .block1 {
-        width: 33vw;
-        height: 50vmin;
-        font-size: calc(8px + 1vmin);
-
-            @media screen and (max-width: 960px) {
-              width: 49vw;
-              // height: 50vmin;
-                h3{
-                  font-size: calc(12px + 1vmin);
+        section {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;  
+          flex-wrap: wrap;
+         
+          .block1 {
+            width: 33vw;
+            height: 50vmin;
+            font-size: calc(8px + 1vmin);
+                @media screen and (max-width: 960px) {
+                  width: 48vw;
+                  h3{
+                      font-size: calc(12px + 1vmin);
+                    }
                 }
-            }
-        }
-
-      .block2 {
-        width: 33vw;
-        height: 50vmin;
-        font-size: calc(8px + 1vmin);
-        background-color: khaki;
-        
-            @media screen and (max-width: 960px) {
-              width: 49vw;
-              // height: 33vmin;
-                h3{
-                  font-size: calc(12px + 1vmin);
-                }
-            }
-      }
-
-      .block3 {
-        width: 33vw;
-        height: 50vmin;
-        font-size: calc(8px + 1vmin);
-
-            @media screen and (max-width: 960px) {
-            width: 98vw;
-            // min-height: 30vh;
-              h3{
-                font-size: calc(12px + 1vmin);
               }
-            }
+
+          .block2 {
+            width: 33vw;
+            height: 50vmin;
+            font-size: calc(8px + 1vmin);
+            background-color: khaki;
+            // margin: 1vmin;
+            
+                @media screen and (max-width: 960px) {
+                  width: 48vw;
+                    h3{
+                      font-size: calc(12px + 1vmin);
+                    }
+                }
+           }
+
+          .block3 {
+            width: 33vw;
+            height: 50vh;
+            font-size: calc(8px + 1vmin);
+            font-weight: lighter;
+
+                @media screen and (max-width: 960px) {
+                width: 98vw;
+                overflow-y: visible;
+                  h3{
+                    font-size: calc(12px + 1vmin);
+                  }
+                }
+            } 
+        @media screen and (max-width: 400px) {
+          overflow:visible;
+          flex-direction: column;
+        }
       }
 
-      @media screen and (max-width: 960px) {
-        gap: 10px;
-        align-items: center;
-      }
     }
-  }
+        // @media screen and (max-width: 350px) {
+        //   overflow:visible;
+        // }
 }
+  // @media screen and (max-width: 960px) {
+  //   gap: 10px;
+  //   align-items: center;
+  // }
+  // @media screen and (max-height: 560px) {
+  //   display: block;
+  //   overflow: visible;
+  //   height: 100%;
+  //   }

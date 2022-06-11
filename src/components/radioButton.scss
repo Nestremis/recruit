@@ -1,40 +1,36 @@
     label {
-    margin: clamp(1rem, 30px, 2rem);
+    margin: clamp(1rem, 20px, 1rem);
     display:flex;
     align-items: center;
     font-weight: 300;
     font-size: calc(12px + 1vmin);
+    height: 5vmin;
      
     input[type='radio'] {
         border: 5px solid white;
         appearance:none;
         border-radius: 50%;
-        width: calc(25px + 1vmin);
-        height: calc(25px + 1vmin);
-        margin: clamp(0vmin, 60px, 2vmin);     
+        width: calc(14px + 2vmin);
+        height: calc(14px + 2vmin);
+        margin: clamp(1vmin, 60px, 2vmin);     
         margin-left: calc(5px + 1vmin);
+        display: flex;
 
         &:checked:after {
             content: '';
-            display: flex;
             width: 60%;
             height: 60%;
             background-color: white;
             border-radius: 50%;
+            display: flex;
             margin: 20%;
         }
     }
    
     @media screen and (max-width: 960px) {
-        width: 45vw;
-        height: 5vmin;
-        // margin: 20px;
-        // margin-left: 0;
-        h3{
-          font-size: calc(11px + 1vmin);
-        }
-       }
-    
+        width: 48vw;
+        height: 6vmin;
+       }    
 }
 
 // input:checked + label {

@@ -1,16 +1,19 @@
 .blockOne {
     margin-top: 5vmin;
     background-color: khaki;
-
+    width: 100%;
+    
 
     .fieldset{
-     background-color: #2a2d36;
-     display: block;
-     font-weight: 300;
-     font-size: 1.4rem;;
+        background-color: #2a2d36;
+        display: block;
+        font-weight: 300;
+        font-size: 1.4rem;
+        width: 100%;
+        padding-left: 2vmin;
     
-        input[type='radio'] {
-            display: block;
+            input[type='radio'] {
+                display: block;
+            }   
         }   
-    }   
 }
