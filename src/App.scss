@@ -3,15 +3,16 @@
 .App {
   text-align: center;
   background-color: #2a2d36;
+  background-color: khaki;
   height: 100vh;
   width: 100vw;
   font-family: 'Open Sans';  
   overflow-x: hidden;
  
-  main{
+  main {
     margin-top: 10vmin;
     color: white;
-    background-color: aquamarine;
+    // background-color: aquamarine;
       
       header {
         padding: 5vmin;
@@ -29,7 +30,7 @@
 
         @media screen and (max-width: 960px) {
           // padding-top: 0;
-          // margin-top: 2vmin;
+          margin-top: 2vmin;
           }
         }
 
@@ -40,37 +41,46 @@
           align-items: center;
           justify-content: space-evenly;  
           flex-wrap: wrap;
+          min-width: 300px;
          
           .block1 {
             width: 33vw;
             height: 50vmin;
             font-size: calc(8px + 1vmin);
-                @media screen and (max-width: 960px) {
-                  width: 48vw;
-                  h3{
-                      font-size: calc(12px + 1vmin);
-                    }
-                }
-              }
-
-          .block2 {
-            width: 33vw;
-            height: 50vmin;
-            font-size: calc(8px + 1vmin);
-            background-color: khaki;
-            // margin: 1vmin;
-            
-                @media screen and (max-width: 960px) {
-                  width: 48vw;
+                  @media screen and (max-width: 960px) {
+                    width: 48vw;
+                    height: 30vh;
                     h3{
                       font-size: calc(12px + 1vmin);
                     }
+                  }
+                  @media screen and (max-width: 420px) {
+                    height: 20vh;                   
+                  }
                 }
-           }
+                
+                .block2 {
+                  width: 33vw;
+                  height: 50vmin;
+                  font-size: calc(8px + 1vmin);
+                  // background-color: khaki;
+                  // margin: 1vmin;
+                  
+                  @media screen and (max-width: 960px) {
+                    height: 30vh;
+                    width: 48vw;
+                    h3{
+                      font-size: calc(12px + 1vmin);
+                    }
+                  }
+                  @media screen and (max-width: 420px) {
+                    height: 20vh;                   
+                  }
+            }
 
           .block3 {
             width: 33vw;
-            height: 50vh;
+            height: 50vmin;
             font-size: calc(8px + 1vmin);
             font-weight: lighter;
 
@@ -81,11 +91,13 @@
                     font-size: calc(12px + 1vmin);
                   }
                 }
-            } 
-        @media screen and (max-width: 400px) {
-          overflow:visible;
-          flex-direction: column;
+             } 
+     
+          @media screen and (max-width: 420px) {
+            overflow:visible;
+            flex-direction: column;
         }
+
       }
 
     }
@@ -102,3 +114,11 @@
   //   overflow: visible;
   //   height: 100%;
   //   }
+
+     // @media screen and (max-width: 960px) {
+        //        grid-template-columns: 1fr 1fr;
+        //    }  
+       
+        //    @media screen and (max-width: 520px) {
+        //        grid-template-columns: 1fr;
+        //    }

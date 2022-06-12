@@ -23,9 +23,8 @@ const BlockTwo = ({ optionMade, setCurrentRecord, currentRecord, setAddedRecord 
       if (currentRecord !== nextRandomText) {
         setAddedRecord(nextRandomText)
       } else if (currentRecord === nextRandomText) {
-        console.log('what');
-        setAddedRecord('TREŚĆ NIE JEST UNIKALNA');
-        // console.log(record);
+        setAddedRecord('TREŚĆ POWTÓRZONA - LOSUJ KOLEJNĄ');
+        // setAddedRecord(nextRandomText);
       }
       // else {
       //   setAddedRecord(prev => records[random].content)

@@ -14,7 +14,7 @@
         height: calc(14px + 2vmin);
         margin: clamp(1vmin, 60px, 2vmin);     
         margin-left: calc(5px + 1vmin);
-        display: flex;
+        // display: flex;
 
         &:checked:after {
             content: '';
@@ -32,7 +32,3 @@
         height: 6vmin;
        }    
 }
-
-// input:checked + label {
-//     color: red;
-// }
