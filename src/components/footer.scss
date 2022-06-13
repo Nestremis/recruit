@@ -107,7 +107,6 @@
                     padding: 4px;
                     margin-top: 3px;
                     transition: transform .2s;
-                    color: #e58f2c;
                     }           
 
                 &:hover {
@@ -118,7 +117,7 @@
                         }
                     }
                 }
-           
+              
               .slide {
                 display: block;
                 width: 270px;
@@ -166,9 +165,14 @@
                 height: 0;
                 }  
 
-            #mark:checked + .slide  {
+            #mark:checked ~ .slide  {
                 height: 90px; 
-                }          
+                }  
+                    
+            #mark:checked ~ .footlabel:after  {
+                margin-top: -3px;
+                transform: rotate(45deg);
+                }       
         }    
     }
 }

@@ -28,12 +28,12 @@ const Footer = ({setName, setReset}) => {
 
                 <div className="dropup">
 
-                    <label htmlFor="mark" className='footlabel'>
+                    <input type='checkbox' id='mark'/>                    
+                    <label htmlFor='mark' className='footlabel'>
                         POKAŻ                         
                     </label>    
-                    <input type="checkbox" id="mark"/>                    
                     
-                    <div className="slide">
+                    <div className='slide'>
                         <button 
                             onClick={() => makeReset()}
                         >
