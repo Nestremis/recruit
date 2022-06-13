@@ -17,18 +17,13 @@ const BlockTwo = ({ optionMade, setCurrentRecord, currentRecord, setAddedRecord 
   };
 
   const handleAddText = () => {    
-
       const nextRandomText = records[random].content;
 
       if (currentRecord !== nextRandomText) {
         setAddedRecord(nextRandomText)
       } else if (currentRecord === nextRandomText) {
         setAddedRecord('TREŚĆ POWTÓRZONA - LOSUJ KOLEJNĄ');
-        // setAddedRecord(nextRandomText);
       }
-      // else {
-      //   setAddedRecord(prev => records[random].content)
-      // }
   };
 
   return (

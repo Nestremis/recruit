@@ -1,9 +1,7 @@
 .blockTwo{
-    // background-color: lightgray;
-    // width: 100%;
-    // align-self: center;
+
     margin:auto;
-    margin-top: 5vmin;
+    margin-top: 4vmin;
   
     button {
         width: 180px;
@@ -12,16 +10,14 @@
         background-color: inherit;
         border: 1px solid white;
         border-radius: 5px;
-        color: white;
+        color : #bebebe;
         font-size: 1rem;
         font-weight: 700;
         cursor: pointer;
 
         &:hover{
             background: linear-gradient(90deg, #cd7400, #ce7501, #d17803, #d67b07, #dc800c, #e28611, #e98c16, #ef911a, #f5961e, #fa9a20, #fd9d22, #fe9e23);
+            color: white;
         }
-        // @media screen and (max-width: 960px) {
-        //    margin: 15px;
-        //    }
     }
-    }
+}

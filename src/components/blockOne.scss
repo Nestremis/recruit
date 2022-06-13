@@ -1,8 +1,6 @@
 .blockOne {
     margin-top: 5vmin;
-    background-color: khaki;
-    width: 100%;
-    
+    width: 100%;    
 
     .fieldset{
         background-color: #2a2d36;
@@ -11,9 +9,10 @@
         font-size: 1.4rem;
         width: 100%;
         padding-left: 2vmin;
+        color : #bebebe;
     
             input[type='radio'] {
                 display: block;
             }   
-        }   
-}
+    }   
+}        

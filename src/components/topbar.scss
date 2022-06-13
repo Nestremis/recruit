@@ -19,7 +19,6 @@
             display: flex;
             cursor: pointer;
             text-decoration: none;
-            // font-size: calc(10px + 4vmin);
             margin-left: clamp(1.875rem, 1.193rem + 3.41vw, 3.75rem);
             background-color: #303030;
             border-radius: 50%;
@@ -45,14 +44,13 @@
         h1{
             margin-left: auto;
             margin-right: 4vw;
-            font-size: calc(10px + 2vmin);
+            font-size: calc(14px + 2vmin);
             text-align: right;
         }
     }
     
     @media screen and (max-width: 960px) {
         & {
-            // position: sticky;
             overflow: hidden;
         }   
     }

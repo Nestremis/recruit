@@ -6,8 +6,8 @@ const RadioButton = ({ label, value, onChange, checked }) => {
       <label>
         <input 
           type="radio" 
-          checked={value} 
           onChange={onChange} 
+          checked={value} 
          />
             {label}
       </label>

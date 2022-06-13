@@ -3,28 +3,9 @@ import './blockOne.scss'
 import RadioButton from './RadioButton'
 
 
-const BlockOne = ({setOptionMade, reset, setReset}) => {  
+const BlockOne = ({setOptionMade, reset, setReset }) => {  
 
   const [selected, setSelected] = useState('');
-
-  useEffect(() => {
-    if (reset === true) {
-      setSelected('')
-    }
-    return () => {
-      setReset(false)
-    }
-  },[reset, setReset]);
-
-  // useEffect(() => {
-  //   function passChosenOption() {
-  //     setOptionMade(selected);
-  //   }; 
-  // }, [selected, setOptionMade])
-  
-  function passChosenOption() {
-    setOptionMade(selected);
-  }; 
   
   const firstOptionChange = () => {
     setSelected('Opcja pierwsza');
@@ -35,20 +16,33 @@ const BlockOne = ({setOptionMade, reset, setReset}) => {
   const thirdOptionChange = () => {
     setSelected('Opcja losowa');
   };
+
+  function passChosenOption() {
+    setOptionMade(selected);
+  }; 
   
+  useEffect(() => {
+    if (reset === true) {
+      setSelected('')
+    }
+    return () => {
+      setReset(false)
+    }
+  },[reset, setReset]);
+
   return (
     <>
     <div className="blockOne">
       <div className="fieldset">        
             <RadioButton 
               label="Opcja pierwsza"
-              value={selected === 'Opcja pierwsza'}
+              value={selected === "Opcja pierwsza"}
               onChange={firstOptionChange}
               checked={passChosenOption()}
             />
             <RadioButton 
               label="Opcja druga"
-              value={selected === 'Opcja druga'}
+              value={selected === "Opcja druga"}
               onChange={secondOptionChange}
               checked={passChosenOption()}
             />
@@ -59,35 +53,9 @@ const BlockOne = ({setOptionMade, reset, setReset}) => {
               checked={passChosenOption()}
             />
       </div>
-
-      
-      {/*<fieldset className="margin-bottom-md">
-        <ul className="flex flex-column gap-xxxs">
-          <li>
-            <input className="radio" type="radio" name="radio-button" id="radio-1"/>
-            <label for="radio-1">Choice 1</label>
-          </li>
-
-          <li>
-            <input className="radio" type="radio" name="radio-button" id="radio-2"/>
-            <label for="radio-2">Lorem ipsum </label>
-          </li>
-        </ul>
-  </fieldset> */}
-
     </div>
     </>
   )
 };
 
 export default BlockOne;
-
-// eslint-disable-next-line no-lone-blocks
-{/* // <input type="radio" className="input"/> 
-// <label> Opcja pierwsza </label>
-
-// <input type="radio" className="input"/> 
-// <label> Opcja druga </label>
-
-// <input type="radio" className="input"/> 
-// <label> Opcja losowa </label> */}

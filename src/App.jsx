@@ -28,16 +28,16 @@ function App() {
 
           <section> 
 
-            <div className="block1"> 
+            <div className="block-1"> 
               <h3>BLOK PIERWSZY</h3> 
               <BlockOne 
-                setOptionMade={setOptionMade}
-                reset={reset}
-                setReset={setReset}
+              setOptionMade={setOptionMade}
+              reset={reset}
+              setReset={setReset} 
               />
             </div>
 
-            <div className="block2"> 
+            <div className="block-2"> 
               <h3>BLOK DRUGI</h3> 
               <BlockTwo 
                 optionMade={optionMade}
@@ -47,7 +47,7 @@ function App() {
               />
             </div>
 
-            <div className="block3"> 
+            <div className="block-3"> 
               <h3>BLOK Z DŁUGĄ NAZWĄ KTÓRA SAMA SIĘ PRZYTNIE...</h3> 
               <BlockThree
                 currentRecord={currentRecord}

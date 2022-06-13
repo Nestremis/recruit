@@ -1,6 +1,5 @@
 .footer {
     width: 100vw;
-    // height: clamp(8.125rem, 7.898rem + 1.14vw, 8.75rem);
     height: 140px;
     position:fixed;
     bottom: 0;
@@ -15,12 +14,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         place-items: center; 
-
        
         .css-logo{
             display: flex;
             justify-self: start;
-            margin-left: 60px;
             margin-left: clamp(1.875rem, 1.193rem + 3.41vw, 3.75rem);
             cursor: pointer;
             text-align: left;
@@ -99,7 +96,6 @@
                 bottom: 25px;
                 font-weight: 600;
                 font-size: 1.1rem;
-                // transform: rotate(10deg);
 
                 &:after {
                     content: "";
@@ -116,23 +112,12 @@
 
                 &:hover {
                     color: white;
+                    border-color: white;
                     &:after{
                         border-color: white;
                         }
                     }
-            }
-                
-               
-                // #touch:checked + b::after {
-                //     background-color: #e58f2c;
-                //     // display: inline-block;
-                //     // transform: rotate(0deg);
-                //     // margin-bottom: 10px;
-                //     }          
-                
-                // #mark:checked + .slide { 
-                //     height: 90px; 
-                //     }        
+                }
            
               .slide {
                 display: block;
@@ -154,8 +139,7 @@
                     border: none;
                     font-weight: 600;
                     font-size: 16px;
-                    margin: 1.1rem;
-                    // padding: -5px;                    
+                    margin: 1.2rem;             
 
                      i  {
                         transform: rotate(-45deg);
@@ -173,25 +157,18 @@
                             border-width: 0 2px 2px 0;
                           }
                         }         
-                    }          
-                
+                    }                          
                 }             
 
             #mark {
-                position: absolute; 
+                position: absolute;
                 opacity: 0; 
                 height: 0;
                 }  
 
-            #mark:checked + .slide {
-                height: 90px;    
-                }
-                
-                // #mark:checked ~ .footlabel:after {
-                //     height: 90px;    
-                // }
-                
-        
+            #mark:checked + .slide  {
+                height: 90px; 
+                }          
         }    
     }
 }
